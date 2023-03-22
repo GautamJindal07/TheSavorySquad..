@@ -1,0 +1,77 @@
+body 
+{
+    background-image:radialgradient(cyan 60%,purple);
+    padding: 50px;
+    background-image: url(https://artandcreativity.com/wp-content/uploads/2019/03/food-photography-101.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+.red{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+        background-color: rgb(0, 0, 0);
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0px;
+        height: 50px;
+        display: flex; 
+        align-items: center;
+        font-size:18px;
+        }
+        
+header * {display:inline;}
+header * {margin: 20px;}
+header * {color:white;}
+
+
+
+* {box-sizing: border-box;}
+
+input[type=text], textarea {
+width: 100%;
+padding: 12px;
+border: 1px solid #d10808;
+border-radius: 4px;
+box-sizing: border-box;
+margin-top: 6px;
+margin-bottom: 16px;
+resize: vertical;
+}
+
+input[type=submit] {
+background-color: #3b2929;
+color: white;
+padding: 12px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+input[type=submit]:hover {
+background-color: #010c0e;
+}
+
+.container {
+border-radius: 5px;
+background-color: rgba(255, 255, 255, 0.79);
+padding: 20px;
+width: 50%; 
+height: 550px;
+float: left;
+font-family:verdana;
+}
+.container1 {
+border-radius: 5px;
+background-color: rgba(255, 255, 255, 0.79);
+padding: 20px;
+float: center;
+height: 550px;
+margin-left: 51%;
+font-family:verdana;
+}
+
+

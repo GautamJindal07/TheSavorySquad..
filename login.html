@@ -1,0 +1,192 @@
+<html> 
+<head>    
+    <title>Login Form</title>    
+     
+<style>
+
+    #login-form{
+        display: none;
+    }
+    body {
+    background-image: url("https://wallpapercave.com/wp/wp3731447.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+    .form-box{
+        width: 380px;
+        height: 480px;
+        position: relative;
+        margin: 2% auto;
+        background: rgba(249, 247, 245, 0.708);
+        padding: 10px;
+        overflow: hidden;
+    }
+    .button-box{
+        width: 220px;
+        margin: 35px auto;
+        position: relative;
+        box-shadow: 0 0 20px 9px #ff61241f;
+        border-radius: 30px;
+    }
+    .toggle-btn{
+        padding: 10px 30px;
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+        outline: none;
+        position: relative;
+    }
+    #btn{
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 110px;
+        height: 100%;
+        background: #F3c693;
+        border-radius: 30px;
+        transition: .5s;
+    }
+    .input-group-login{
+        top: 150px;
+        position: absolute;
+        width: 280px;
+        transition: .5s;
+    }
+    .input-group-register{
+        top: 120px;
+        position: absolute;
+        width: 280px;
+        transition: .5s;
+
+    }
+    .input-field{
+        width: 100%;
+        padding: 10px 0;
+        margin: 5px 0;
+        border-left: 0;
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 1px solid #150101f3;
+        outline: none;
+        background: transparent;
+    }
+    .submit-btn{
+        width: 85%;
+        padding: 10px 20px;
+        cursor: pointer;
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+        background: #F3c693;
+        border: 0;
+        outline: none;
+        border-radius: 30px;
+    }
+    .check-box{
+        margin: 30px 10px 34px 0;
+    }
+    span{
+        color: #777;
+        font-size: 15px;
+        bottom: 35px;
+        
+    }
+    #login{
+        left: 50px;
+    }
+    #login-input{
+        color: white;
+        font-size: 15;
+    }
+    #register{
+        left: 450px;
+    }
+    #register-input{
+        color: white;
+        font-size: 15;
+    }
+
+</style>	
+</head>    
+<body>    
+       <div class="full_page">
+             <div id="login_form" class="login-page">
+                <div class="form-box">
+                    <div class="button-box">
+                        <div id="btn"></div>
+                        <button type="button" onclick="login()" class="toggle-btn">Log In</button>
+                        <button type="button" onclick="register()" class="toggle-btn">Register</button>
+                    </div>
+                    <form id="login" action="menu.html" class="input-group-login">
+                        <input type="email" class="input-field" placeholder="Email Id" id="email" required>
+                        <input type="password" class="input-field" placeholder="Enter Password" id="pass" required>
+                        <div id="check">
+                        <input type="checkbox" class="ckeck-box"><span>Remember Me</span>
+                        </div>
+                        
+                        <a href="menu.html"><button type="submit" class="submit-btn" onclick="checkInputs1()">Log in</button></a>
+                    </form>
+                    <form id="register" action="menu.html" class="input-group-register">
+                        <input type="text" class="input-field" placeholder="First Name" id="fname" required>
+                        <input type="text" class="input-field" placeholder="Last Name" id="lname" required>
+                        <input type="email" class="input-field" placeholder="Email Id" id="email" required>
+                        <input type="password" class="input-field" placeholder="Enter Password" id="pass" required>
+                        <input type="checkbox" class="ckeck-box"><span>I Agree to the T&C</span>
+                        <button type="submit" class="submit-btn">Register</button>
+                    </form>
+                </div>
+             </div>
+       </div>
+<script>
+    var x=document.getElementById('login');
+    var y= document.getElementById('register');
+    var z=document.getElementById('btn');
+    function register()
+    {
+        x.style.left='-400px';
+        y.style.left='50px';
+        z.style.left='110px';
+    }
+    function login()
+    {
+        x.style.left='50px';
+        y.style.left='450px';
+        z.style.left='0px';
+    }
+    function checkInputs() {
+  var fname = document.getElementById("fname").value;
+  var lname = document.getElementById("lname").value;
+  var email = document.getElementById("email").value;
+  var pass = document.getElementById("pass").value;
+  if (lname == "" || email == "" || fname == "" || pass == "") {
+    alert("Please fill in all fields");
+  } else {
+    location.href = "menu.html";
+  }
+}
+function checkInputs1() {
+    var email = document.getElementById("email").value;
+  var pass = document.getElementById("pass").value;
+  if ( email == "" || pass == "") {
+    alert("Please fill in all fields");
+  } else {
+    window.location.href = "menu.html";
+  }
+
+}
+</script>
+
+<script>
+    var modal = document.getElementById('login-form');
+    window.onclick = function(event)
+    {
+        if(event.target==modal)
+        {
+            modal.style.display=none;
+        }
+    }
+</script>
+
+</body>    
+</html>
